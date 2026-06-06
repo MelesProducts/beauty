@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,7 +7,7 @@
     <title>MELE'S tu tienda online</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Urbanist:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Urbanist:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         /* Estilos Generales con Fondo Estelar */
         body {
@@ -35,21 +36,19 @@
             padding: 50px 20px;
         }
 
-        /* LOGO MÁS GRANDE Y REINVENTADO */
         .logo-tienda {
-            width: 200px; /* Tamaño más grande y llamativo */
+            width: 200px;
             height: 200px;
             border-radius: 50%;
-            border: 3px solid #d4af37; /* Borde de oro más definido */
-            box-shadow: 0 0 25px rgba(212, 175, 55, 0.5); /* Destello dorado */
+            border: 3px solid #d4af37;
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
             margin-bottom: 20px;
             object-fit: cover;
         }
 
-        /* ESTILO DE LETRA MODERNO Y LEGIBLE */
         header h1 {
             font-family: 'Playfair Display', serif;
-            color: #d4af37; /* Color Oro */
+            color: #d4af37;
             font-size: 3.5rem;
             font-weight: 700;
             margin: 0;
@@ -58,7 +57,7 @@
         }
 
         header p {
-            color: #ffb6c1; /* Rosado Suave */
+            color: #ffb6c1;
             font-size: 1.3rem;
             font-style: italic;
             font-family: 'Playfair Display', serif;
@@ -66,17 +65,38 @@
             letter-spacing: 1px;
         }
 
+        /* Títulos de Secciones del Catálogo */
+        .seccion-titulo {
+            font-family: 'Playfair Display', serif;
+            color: #d4af37;
+            font-size: 2.2rem;
+            text-align: center;
+            margin: 60px 0 30px 0;
+            letter-spacing: 2px;
+            position: relative;
+        }
+
+        .seccion-titulo::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 2px;
+            background-color: #ffb6c1;
+            margin: 10px auto 0 auto;
+        }
+
         /* Contenedor de Productos */
         .container {
             max-width: 1200px;
-            margin: 50px auto;
+            margin: 0 auto;
             padding: 0 20px;
         }
 
         .grid-productos {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 35px;
+            margin-bottom: 40px;
         }
 
         /* Tarjetas de Productos */
@@ -89,11 +109,14 @@
             transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
             text-align: center;
             box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .tarjeta-producto:hover {
             transform: translateY(-8px);
-            border-color: #ffb6c1; /* Iluminación rosa al pasar el cursor */
+            border-color: #ffb6c1;
             box-shadow: 0 12px 25px rgba(255, 182, 193, 0.25);
         }
 
@@ -112,22 +135,25 @@
 
         .info-producto {
             padding: 25px;
-        }
-
-        .categoria {
-            font-size: 0.75rem;
-            color: #ffb6c1;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 8px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .nombre-producto {
             font-family: 'Playfair Display', serif;
             font-size: 1.4rem;
             color: #ffffff;
-            margin: 10px 0;
+            margin: 5px 0 10px 0;
             font-weight: 600;
+        }
+
+        .descripcion-producto {
+            font-size: 0.9rem;
+            color: #cccccc;
+            margin-bottom: 15px;
+            line-height: 1.4;
         }
 
         .precio {
@@ -152,6 +178,7 @@
             letter-spacing: 1px;
             transition: all 0.3s ease;
             cursor: pointer;
+            margin-top: auto;
         }
 
         .btn-comprar:hover {
@@ -181,49 +208,131 @@
     </header>
 
     <div class="container">
+        
+        <h2 class="seccion-titulo">Perfumería de Alta Gama</h2>
         <div class="grid-productos">
-            
             <div class="tarjeta-producto">
-                <div class="imagen-placeholder">✨ [Foto de Perfume] ✨</div>
+                <div class="imagen-placeholder">✨ [Foto Perfume Royal] ✨</div>
                 <div class="info-producto">
-                    <div class="categoria">Perfumes</div>
                     <h3 class="nombre-producto">Fragancia Royal</h3>
+                    <p class="descripcion-producto">Notas florales intensas con toques de sándalo y ámbar de larga duración.</p>
                     <div class="precio">$85.00</div>
                     <a href="#" class="btn-comprar">Comprar</a>
                 </div>
             </div>
-
             <div class="tarjeta-producto">
-                <div class="imagen-placeholder">✨ [Foto de Ropa Interior] ✨</div>
+                <div class="imagen-placeholder">✨ [Foto Perfume Cristal] ✨</div>
                 <div class="info-producto">
-                    <div class="categoria">Lencería</div>
+                    <h3 class="nombre-producto">Néctar Cristal</h3>
+                    <p class="descripcion-producto">Una mezcla dulce y fresca de vainilla francesa combinada con cítricos dulces.</p>
+                    <div class="precio">$78.00</div>
+                    <a href="#" class="btn-comprar">Comprar</a>
+                </div>
+            </div>
+            <div class="tarjeta-producto">
+                <div class="imagen-placeholder">✨ [Foto Perfume Elixir] ✨</div>
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Gold Elixir</h3>
+                    <p class="descripcion-producto">Esencia exótica oriental con notas maderadas, perfecta para noches inolvidables.</p>
+                    <div class="precio">$92.00</div>
+                    <a href="#" class="btn-comprar">Comprar</a>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="seccion-titulo">Lencería Femenina Exclusiva</h2>
+        <div class="grid-productos">
+            <div class="tarjeta-producto">
+                <div class="imagen-placeholder">✨ [Foto Conjunto Rosé] ✨</div>
+                <div class="info-producto">
                     <h3 class="nombre-producto">Conjunto Encaje Rosé</h3>
+                    <p class="descripcion-producto">Encaje de hilos finos en tono rosado suave, diseñado para amoldarse a tu figura.</p>
                     <div class="precio">$45.00</div>
                     <a href="#" class="btn-comprar">Comprar</a>
                 </div>
             </div>
-
             <div class="tarjeta-producto">
-                <div class="imagen-placeholder">✨ [Foto de Candela] ✨</div>
+                <div class="imagen-placeholder">✨ [Foto Body Noir] ✨</div>
                 <div class="info-producto">
-                    <div class="categoria">Hogar & Aroma</div>
-                    <h3 class="nombre-producto">Vela Aromática Lavender</h3>
+                    <h3 class="nombre-producto">Body Seduzione Noir</h3>
+                    <p class="descripcion-producto">Elegante pieza de satén y encaje negro con sutiles tirantes dorados ajustables.</p>
+                    <div class="precio">$55.00</div>
+                    <a href="#" class="btn-comprar">Comprar</a>
+                </div>
+            </div>
+            <div class="tarjeta-producto">
+                <div class="imagen-placeholder">✨ [Foto Bata Silk] ✨</div>
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Bata Imperial Silk</h3>
+                    <p class="descripcion-producto">Bata corta de seda premium con caídas delicadas y mangas de encaje blando.</p>
+                    <div class="precio">$65.00</div>
+                    <a href="#" class="btn-comprar">Comprar</a>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="seccion-titulo">Candelas Aromatizantes</h2>
+        <div class="grid-productos">
+            <div class="tarjeta-producto">
+                <div class="imagen-placeholder">✨ [Foto Vela Lavender] ✨</div>
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Vela Lavender Dream</h3>
+                    <p class="descripcion-producto">Cera de soya con extracto puro de lavanda silvestre para relajar tu ambiente.</p>
                     <div class="precio">$22.00</div>
                     <a href="#" class="btn-comprar">Comprar</a>
                 </div>
             </div>
-
             <div class="tarjeta-producto">
-                <div class="imagen-placeholder">✨ [Foto de Crema] ✨</div>
+                <div class="imagen-placeholder">✨ [Foto Vela Vanille] ✨</div>
                 <div class="info-producto">
-                    <div class="categoria">Cuidado Corporal</div>
+                    <h3 class="nombre-producto">Vanille & Gold Spark</h3>
+                    <p class="descripcion-producto">Cálido aroma a vainilla tostada envuelto en un frasco de vidrio negro y tapa oro.</p>
+                    <div class="precio">$24.00</div>
+                    <a href="#" class="btn-comprar">Comprar</a>
+                </div>
+            </div>
+            <div class="tarjeta-producto">
+                <div class="imagen-placeholder">✨ [Foto Vela Roses] ✨</div>
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Velvet Roses Candle</h3>
+                    <p class="descripcion-producto">Aroma dulce a pétalos de rosas rojas frescas maceradas, ideal para noches románticas.</p>
+                    <div class="precio">$25.00</div>
+                    <a href="#" class="btn-comprar">Comprar</a>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="seccion-titulo">Cuidado Corporal & Cremas</h2>
+        <div class="grid-productos">
+            <div class="tarjeta-producto">
+                <div class="imagen-placeholder">✨ [Foto Crema Gold] ✨</div>
+                <div class="info-producto">
                     <h3 class="nombre-producto">Crema Hidratante Gold</h3>
+                    <p class="descripcion-producto">Enriquecida con vitamina E y destellos dorados iluminadores para tu piel.</p>
                     <div class="precio">$30.00</div>
                     <a href="#" class="btn-comprar">Comprar</a>
                 </div>
             </div>
-
+            <div class="tarjeta-producto">
+                <div class="imagen-placeholder">✨ [Foto Crema Rosé] ✨</div>
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Loción Satin Rosé</h3>
+                    <p class="descripcion-producto">Absorción rápida con un delicioso aroma a flores rosadas y colágeno reafirmante.</p>
+                    <div class="precio">$28.00</div>
+                    <a href="#" class="btn-comprar">Comprar</a>
+                </div>
+            </div>
+            <div class="tarjeta-producto">
+                <div class="imagen-placeholder">✨ [Foto Serum Night] ✨</div>
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Serum Corporal Night Repair</h3>
+                    <p class="descripcion-producto">Tratamiento nocturno ultra-hidratante que restaura el brillo natural de tu piel.</p>
+                    <div class="precio">$38.00</div>
+                    <a href="#" class="btn-comprar">Comprar</a>
+                </div>
+            </div>
         </div>
+
     </div>
 
     <footer>
