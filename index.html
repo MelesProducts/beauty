@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MELE'S - Catálogo de Lujo</title>
+    <title>MELE'S tu tienda online</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Urbanist:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Urbanist:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         /* Estilos Generales con Fondo Estelar */
         body {
@@ -119,17 +119,13 @@
             box-shadow: 0 12px 25px rgba(255, 182, 193, 0.25);
         }
 
-        .imagen-placeholder {
+        /* Estilo unificado para las imágenes del catálogo */
+        .foto-producto {
             width: 100%;
             height: 260px;
-            background: linear-gradient(45deg, #1f1f1f, #2a2a2a);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #ffb6c1;
-            font-size: 1.1rem;
-            font-weight: 500;
+            object-fit: cover;
             border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            background-color: #1a1a1a;
         }
 
         .info-producto {
@@ -208,10 +204,72 @@
 
     <div class="container">
         
+        <h2 class="seccion-titulo">Perfumería de Alta Gama</h2>
+        <div class="grid-productos">
+            <div class="tarjeta-producto">
+                <img src="perfume1.jpg" alt="Fragancia Royal" class="foto-producto">
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Fragancia Royal</h3>
+                    <p class="descripcion-producto">Notas florales intensas con toques de sándalo y ámbar de larga duración.</p>
+                    <div class="precio">L. 2,100.00</div>
+                    <a href="#" class="btn-comprar">Comprar</a>
+                </div>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="perfume2.jpg" alt="Néctar Cristal" class="foto-producto">
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Néctar Cristal</h3>
+                    <p class="descripcion-producto">Una mezcla dulce y fresca de vainilla francesa combinada con cítricos dulces.</p>
+                    <div class="precio">L. 1,920.00</div>
+                    <a href="#" class="btn-comprar">Comprar</a>
+                </div>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="perfume3.jpg" alt="Gold Elixir" class="foto-producto">
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Gold Elixir</h3>
+                    <p class="descripcion-producto">Esencia exótica oriental con notas maderadas, perfecta para noches inolvidables.</p>
+                    <div class="precio">L. 2,270.00</div>
+                    <a href="#" class="btn-comprar">Comprar</a>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="seccion-titulo">Lencería Femenina Exclusiva</h2>
+        <div class="grid-productos">
+            <div class="tarjeta-producto">
+                <img src="lenceria1.jpg" alt="Conjunto Encaje Rosé" class="foto-producto">
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Conjunto Encaje Rosé</h3>
+                    <p class="descripcion-producto">Encaje de hilos finos en tono rosado suave, diseñado para amoldarse a tu figura.</p>
+                    <div class="precio">L. 1,110.00</div>
+                    <a href="#" class="btn-comprar">Comprar</a>
+                </div>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="lenceria2.jpg" alt="Body Seduzione Noir" class="foto-producto">
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Body Seduzione Noir</h3>
+                    <p class="descripcion-producto">Elegante pieza de satén y encaje negro con sutiles tirantes dorados ajustables.</p>
+                    <div class="precio">L. 1,360.00</div>
+                    <a href="#" class="btn-comprar">Comprar</a>
+                </div>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="lenceria3.jpg" alt="Bata Imperial Silk" class="foto-producto">
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Bata Imperial Silk</h3>
+                    <p class="descripcion-producto">Bata corta de seda premium con caídas delicadas y mangas de encaje blando.</p>
+                    <div class="precio">L. 1,600.00</div>
+                    <a href="#" class="btn-comprar">Comprar</a>
+                </div>
+            </div>
+        </div>
+
         <h2 class="seccion-titulo">Ropa Deportiva Masculina</h2>
         <div class="grid-productos">
             <div class="tarjeta-producto">
-                <div class="imagen-placeholder">✨ [Foto Conjunto Alpha] ✨</div>
+                <img src="deportivo1.jpg" alt="Conjunto Alpha Performance" class="foto-producto">
                 <div class="info-producto">
                     <h3 class="nombre-producto">Conjunto Alpha Performance</h3>
                     <p class="descripcion-producto">Camiseta de compresión transpirable y short ligero de secado rápido, ideal para alto rendimiento.</p>
@@ -220,7 +278,7 @@
                 </div>
             </div>
             <div class="tarjeta-producto">
-                <div class="imagen-placeholder">✨ [Foto Sudadera Onyx] ✨</div>
+                <img src="deportivo2.jpg" alt="Sudadera Stealth Onyx" class="foto-producto">
                 <div class="info-producto">
                     <h3 class="nombre-producto">Sudadera Stealth Onyx</h3>
                     <p class="descripcion-producto">Sudadera con capucha térmica en color negro mate, diseño slim-fit con detalles reflectantes oro.</p>
@@ -229,11 +287,73 @@
                 </div>
             </div>
             <div class="tarjeta-producto">
-                <div class="imagen-placeholder">✨ [Foto Jogger Elite] ✨</div>
+                <img src="deportivo3.jpg" alt="Jogger Elite Fit" class="foto-producto">
                 <div class="info-producto">
                     <h3 class="nombre-producto">Jogger Elite Fit</h3>
                     <p class="descripcion-producto">Pantalón deportivo elástico con bolsillos con cremallera oculta. Máxima comodidad y estilo urbano.</p>
                     <div class="precio">L. 1,050.00</div>
+                    <a href="#" class="btn-comprar">Comprar</a>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="seccion-titulo">Candelas Aromatizantes</h2>
+        <div class="grid-productos">
+            <div class="tarjeta-producto">
+                <img src="vela1.jpg" alt="Vela Lavender Dream" class="foto-producto">
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Vela Lavender Dream</h3>
+                    <p class="descripcion-producto">Cera de soya con extracto puro de lavanda silvestre para relajar tu ambiente.</p>
+                    <div class="precio">L. 540.00</div>
+                    <a href="#" class="btn-comprar">Comprar</a>
+                </div>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="vela2.jpg" alt="Vanille & Gold Spark" class="foto-producto">
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Vanille & Gold Spark</h3>
+                    <p class="descripcion-producto">Cálido aroma a vainilla tostada envuelto en un frasco de vidrio negro y tapa oro.</p>
+                    <div class="precio">L. 590.00</div>
+                    <a href="#" class="btn-comprar">Comprar</a>
+                </div>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="vela3.jpg" alt="Velvet Roses Candle" class="foto-producto">
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Velvet Roses Candle</h3>
+                    <p class="descripcion-producto">Aroma dulce a pétalos de rosas rojas frescas maceradas, ideal para noches románticas.</p>
+                    <div class="precio">L. 615.00</div>
+                    <a href="#" class="btn-comprar">Comprar</a>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="seccion-titulo">Cuidado Corporal & Cremas</h2>
+        <div class="grid-productos">
+            <div class="tarjeta-producto">
+                <img src="crema1.jpg" alt="Crema Hidratante Gold" class="foto-producto">
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Crema Hidratante Gold</h3>
+                    <p class="descripcion-producto">Enriquecida con vitamina E y destellos dorados iluminadores para tu piel.</p>
+                    <div class="precio">L. 740.00</div>
+                    <a href="#" class="btn-comprar">Comprar</a>
+                </div>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="crema2.jpg" alt="Loción Satin Rosé" class="foto-producto">
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Loción Satin Rosé</h3>
+                    <p class="descripcion-producto">Absorción rápida con un delicioso aroma a flores rosadas y colágeno reafirmante.</p>
+                    <div class="precio">L. 690.00</div>
+                    <a href="#" class="btn-comprar">Comprar</a>
+                </div>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="crema3.jpg" alt="Serum Corporal Night Repair" class="foto-producto">
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Serum Corporal Night Repair</h3>
+                    <p class="descripcion-producto">Tratamiento nocturno ultra-hidratante que restaura el brillo natural de tu piel.</p>
+                    <div class="precio">L. 935.00</div>
                     <a href="#" class="btn-comprar">Comprar</a>
                 </div>
             </div>
