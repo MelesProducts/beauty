@@ -4,209 +4,177 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MELE'S tu tienda online</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Urbanist:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
-        /* Estilos Generales con colores Negro, Oro y Rosado Suave */
+        /* Estilos Generales con Fondo Estelar */
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Playfair Display', 'Georgia', serif;
-            background-color: #0d0d0d;
-            /* Fondo negro con un patrón sutil de diamantes geométricos */
-            background-image: url('https://www.transparenttextures.com/patterns/black-diamond.png');
+            font-family: 'Urbanist', sans-serif;
+            background-color: #050505;
+            /* Fondo de cielo nocturno estrellado usando gradientes radiales */
+            background-image: 
+                radial-gradient(1px 1px at 10% 15%, #ffffff 100%, transparent),
+                radial-gradient(1px 1px at 30% 45%, #d4af37 100%, transparent),
+                radial-gradient(2px 2px at 50% 25%, #ffb6c1 100%, transparent),
+                radial-gradient(1px 1px at 75% 65%, #ffffff 100%, transparent),
+                radial-gradient(2px 2px at 85% 40%, #d4af37 100%, transparent),
+                radial-gradient(1px 1px at 60% 85%, #ffb6c1 100%, transparent),
+                radial-gradient(1.5px 1.5px at 20% 75%, #ffffff 100%, transparent);
+            background-size: 400px 400px;
             color: #ffffff;
         }
 
-        /* Encabezado Elegante */
+        /* Encabezado Premium */
         header {
-            background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%);
-            border-bottom: 3px solid #d4af37; /* Color Oro */
+            background: linear-gradient(180deg, rgba(13, 13, 13, 0.9) 0%, rgba(5, 5, 5, 0.6) 100%);
+            border-bottom: 2px solid #d4af37; /* Línea de oro */
             text-align: center;
-            padding: 40px 20px;
+            padding: 50px 20px;
         }
 
-        /* Estilo para el Logo/Icono */
+        /* LOGO MÁS GRANDE Y REINVENTADO */
         .logo-tienda {
-            width: 120px; /* Tamaño ideal para el logo circular */
-            height: auto;
+            width: 200px; /* Tamaño más grande y llamativo */
+            height: 200px;
             border-radius: 50%;
-            border: 2px solid #d4af37; /* Borde de oro alrededor del logo */
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-            margin-bottom: 15px;
+            border: 3px solid #d4af37; /* Borde de oro más definido */
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.5); /* Destello dorado */
+            margin-bottom: 20px;
+            object-fit: cover;
         }
 
+        /* ESTILO DE LETRA MODERNO Y LEGIBLE */
         header h1 {
-            color: #d4af37; /* Oro */
-            font-size: 3rem;
+            font-family: 'Playfair Display', serif;
+            color: #d4af37; /* Color Oro */
+            font-size: 3.5rem;
+            font-weight: 700;
             margin: 0;
-            letter-spacing: 4px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
         }
 
         header p {
             color: #ffb6c1; /* Rosado Suave */
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-style: italic;
-            margin-top: 10px;
+            font-family: 'Playfair Display', serif;
+            margin-top: 12px;
+            letter-spacing: 1px;
         }
 
-        /* Contenedor Principal */
+        /* Contenedor de Productos */
         .container {
             max-width: 1200px;
-            margin: 40px auto;
+            margin: 50px auto;
             padding: 0 20px;
         }
 
-        /* Cuadrícula de Productos */
         .grid-productos {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 35px;
         }
 
-        /* Tarjeta de Producto Individual */
+        /* Tarjetas de Productos */
         .tarjeta-producto {
-            background-color: #1a1a1a;
-            border: 1px solid rgba(212, 175, 55, 0.3); /* Borde oro suave */
-            border-radius: 8px;
+            background-color: rgba(26, 26, 26, 0.75);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 12px;
             overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
             text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.6);
         }
 
         .tarjeta-producto:hover {
-            transform: translateY(-5px);
-            border-color: #ffb6c1; /* Cambia a rosado al pasar el cursor */
-            box-shadow: 0 6px 20px rgba(255, 182, 193, 0.2);
+            transform: translateY(-8px);
+            border-color: #ffb6c1; /* Iluminación rosa al pasar el cursor */
+            box-shadow: 0 12px 25px rgba(255, 182, 193, 0.25);
         }
 
-        /* Contenedor de Imagen de marcador de posición elegante */
         .imagen-placeholder {
             width: 100%;
-            height: 250px;
-            background: linear-gradient(45deg, #1f1f1f, #2d2d2d);
+            height: 260px;
+            background: linear-gradient(45deg, #1f1f1f, #2a2a2a);
             display: flex;
             align-items: center;
             justify-content: center;
             color: #ffb6c1;
             font-size: 1.1rem;
-            border-bottom: 2px solid #d4af37;
+            font-weight: 500;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
         }
 
-        /* Detalles del Producto */
         .info-producto {
-            padding: 20px;
+            padding: 25px;
         }
 
         .categoria {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: #ffb6c1;
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
         }
 
         .nombre-producto {
-            font-size: 1.3rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
             color: #ffffff;
             margin: 10px 0;
+            font-weight: 600;
         }
 
         .precio {
             color: #d4af37;
-            font-size: 1.4rem;
-            font-weight: bold;
-            margin-bottom: 15px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
         }
 
-        /* Botón de compra llamativo */
+        /* Botón de Compra Moderno */
         .btn-comprar {
             display: inline-block;
-            background: linear-gradient(135deg, #d4af37 0%, #aa841b 100%);
+            background: linear-gradient(135deg, #d4af37 0%, #b89025 100%);
             color: #000000;
-            padding: 10px 25px;
+            padding: 12px 30px;
             border: none;
-            border-radius: 25px;
-            font-weight: bold;
+            border-radius: 50px;
+            font-weight: 600;
             text-decoration: none;
-            transition: background 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
             cursor: pointer;
         }
 
         .btn-comprar:hover {
             background: linear-gradient(135deg, #ffb6c1 0%, #ffa07a 100%);
-            color: #000000;
+            transform: scale(1.05);
         }
 
         /* Pie de Página */
         footer {
-            background-color: #0a0a0a;
+            background-color: #050505;
             text-align: center;
-            padding: 30px;
-            margin-top: 60px;
-            border-top: 1px solid #d4af37;
-            color: #888888;
+            padding: 40px;
+            margin-top: 80px;
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+            color: #777777;
             font-size: 0.9rem;
+            letter-spacing: 1px;
         }
     </style>
 </head>
 <body>
 
     <header>
-      <img src="MELES-icon.jpeg" alt="MELE'S Icono" class="logo-tienda">
+        <img src="MELES-icon.jpeg" alt="MELE'S Logo" class="logo-tienda">
         <h1>MELE'S tu tienda online</h1>
-        <p>Exclusividad, elegancia y aroma en un solo lugar</p>
-    </header>
-
-    <div class="container">
-        <div class="grid-productos">
-            
-            <div class="tarjeta-producto">
-                <div class="imagen-placeholder">✨ [Foto de Perfume] ✨</div>
-                <div class="info-producto">
-                    <div class="categoria">Perfumes</div>
-                    <h3 class="nombre-producto">Fragancia Royal</h3>
-                    <div class="precio">$85.00</div>
-                    <a href="#" class="btn-comprar">Comprar</a>
-                </div>
-            </div>
-
-            <div class="tarjeta-producto">
-                <div class="imagen-placeholder">✨ [Foto de Ropa Interior] ✨</div>
-                <div class="info-producto">
-                    <div class="categoria">Lencería</div>
-                    <h3 class="nombre-producto">Conjunto Encaje Rosé</h3>
-                    <div class="precio">$45.00</div>
-                    <a href="#" class="btn-comprar">Comprar</a>
-                </div>
-            </div>
-
-            <div class="tarjeta-producto">
-                <div class="imagen-placeholder">✨ [Foto de Candela] ✨</div>
-                <div class="info-producto">
-                    <div class="categoria">Hogar & Aroma</div>
-                    <h3 class="nombre-producto">Vela Aromática Lavender</h3>
-                    <div class="precio">$22.00</div>
-                    <a href="#" class="btn-comprar">Comprar</a>
-                </div>
-            </div>
-
-            <div class="tarjeta-producto">
-                <div class="imagen-placeholder">✨ [Foto de Crema] ✨</div>
-                <div class="info-producto">
-                    <div class="categoria">Cuidado Corporal</div>
-                    <h3 class="nombre-producto">Crema Hidratante Gold</h3>
-                    <div class="precio">$30.00</div>
-                    <a href="#" class="btn-comprar">Comprar</a>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2026 MELE'S tu tienda online. Todos los derechos reservados.</p>
-    </footer>
-
-</body>
-</html>
+        <p>
