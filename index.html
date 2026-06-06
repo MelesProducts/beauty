@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MELE'S tu tienda online</title>
+    <style>
+        /* Estilos Generales con colores Negro, Oro y Rosado Suave */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Playfair Display', 'Georgia', serif;
+            background-color: #0d0d0d;
+            /* Fondo negro con un patrón sutil de diamantes geométricos */
+            background-image: url('https://www.transparenttextures.com/patterns/black-diamond.png');
+            color: #ffffff;
+        }
+
+        /* Encabezado Elegante */
+        header {
+            background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%);
+            border-bottom: 3px solid #d4af37; /* Color Oro */
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            color: #d4af37; /* Oro */
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: 4px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+        }
+
+        header p {
+            color: #ffb6c1; /* Rosado Suave */
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-top: 10px;
+        }
+
+        /* Contenedor Principal */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Cuadrícula de Productos */
+        .grid-productos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        /* Tarjeta de Producto Individual */
+        .tarjeta-producto {
+            background-color: #1a1a1a;
+            border: 1px solid rgba(212, 175, 55, 0.3); /* Borde oro suave */
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        .tarjeta-producto:hover {
+            transform: translateY(-5px);
+            border-color: #ffb6c1; /* Cambia a rosado al pasar el cursor */
+            box-shadow: 0 6px 20px rgba(255, 182, 193, 0.2);
+        }
+
+        /* Contenedor de Imagen de marcador de posición elegante */
+        .imagen-placeholder {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(45deg, #1f1f1f, #2d2d2d);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffb6c1;
+            font-size: 1.1rem;
+            border-bottom: 2px solid #d4af37;
+        }
+
+        /* Detalles del Producto */
+        .info-producto {
+            padding: 20px;
+        }
+
+        .categoria {
+            font-size: 0.8rem;
+            color: #ffb6c1;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        .nombre-producto {
+            font-size: 1.3rem;
+            color: #ffffff;
+            margin: 10px 0;
+        }
+
+        .precio {
+            color: #d4af37;
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* Botón de compra llamativo */
+        .btn-comprar {
+            display: inline-block;
+            background: linear-gradient(135deg, #d4af37 0%, #aa841b 100%);
+            color: #000000;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-comprar:hover {
+            background: linear-gradient(135deg, #ffb6c1 0%, #ffa07a 100%);
+            color: #000000;
+        }
+
+        /* Pie de Página */
+        footer {
+            background-color: #0a0a0a;
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+            border-top: 1px solid #d4af37;
+            color: #888888;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>MELE'S tu tienda online</h1>
+        <p>Exclusividad, elegancia y aroma en un solo lugar</p>
+    </header>
+
+    <div class="container">
+        <div class="grid-productos">
+            
+            <div class="tarjeta-producto">
+                <div class="imagen-placeholder">✨ [Foto de Perfume] ✨</div>
+                <div class="info-producto">
+                    <div class="categoria">Perfumes</div>
+                    <h3 class="nombre-producto">Fragancia Royal</h3>
+                    <div class="precio">$85.00</div>
+                    <a href="#" class="btn-comprar">Comprar</a>
+                </div>
+            </div>
+
+            <div class="tarjeta-producto">
+                <div class="imagen-placeholder">✨ [Foto de Ropa Interior] ✨</div>
+                <div class="info-producto">
+                    <div class="categoria">Lencería</div>
+                    <h3 class="nombre-producto">Conjunto Encaje Rosé</h3>
+                    <div class="precio">$45.00</div>
+                    <a href="#" class="btn-comprar">Comprar</a>
+                </div>
+            </div>
+
+            <div class="tarjeta-producto">
+                <div class="imagen-placeholder">✨ [Foto de Candela] ✨</div>
+                <div class="info-producto">
+                    <div class="categoria">Hogar & Aroma</div>
+                    <h3 class="nombre-producto">Vela Aromática Lavender</h3>
+                    <div class="precio">$22.00</div>
+                    <a href="#" class="btn-comprar">Comprar</a>
+                </div>
+            </div>
+
+            <div class="tarjeta-producto">
+                <div class="imagen-placeholder">✨ [Foto de Crema] ✨</div>
+                <div class="info-producto">
+                    <div class="categoria">Cuidado Corporal</div>
+                    <h3 class="nombre-producto">Crema Hidratante Gold</h3>
+                    <div class="precio">$30.00</div>
+                    <a href="#" class="btn-comprar">Comprar</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 MELE'S tu tienda online. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
